@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CV - Ricardo Salinas Huerta</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/lucide@latest"></script>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+			body {
+				font-family: "Inter", sans-serif;
+				background-color: #f3f4f6;
+				color: #1f2937;
+			}
+
+			@media print {
+				body {
+					background-color: white;
+					margin: 0;
+					padding: 0;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+				.page-container {
+					box-shadow: none !important;
+					margin: 0 !important;
+					padding: 0.5cm 1cm !important;
+					max-width: 100% !important;
+				}
+			}
+
+			.section-title {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				font-weight: 600;
+				color: #374151;
+				margin-top: 1.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.section-title::before,
+			.section-title::after {
+				content: "";
+				flex: 1;
+				border-bottom: 1px solid #d1d5db;
+			}
+
+			.section-title:not(:empty)::before {
+				margin-right: 1em;
+			}
+
+			.section-title:not(:empty)::after {
+				margin-left: 1em;
+			}
+		</style>
+	</head>
+	<body class="py-8 flex justify-center">
+		<div
+			class="page-container bg-white w-full max-w-4xl mx-auto p-10 md:p-14 shadow-lg"
+		>
+			<header class="text-center mb-6">
+				<h1 class="text-3xl font-bold tracking-wide text-gray-900 mb-1">
+					RICARDO SALINAS HUERTA
+				</h1>
+				<h2 class="text-lg text-gray-600 mb-2">
+					Ingeniero en Sistemas Inteligentes | Desarrollador de Software
+				</h2>
+				<div
+					class="text-sm text-gray-500 flex flex-wrap justify-center items-center gap-2"
+				>
+					<span>San Luis Potosí, México</span>
+					<span>•</span>
+					<span>+52 487 129 5285</span>
+					<span>•</span>
+					<a href="mailto:rica-sal@hotmail.com" class="hover:text-gray-800"
+						>rica-sal@hotmail.com</a
+					>
+					<span>•</span>
+					<a href="https://rica-2000.github.io/" class="hover:text-gray-800"
+						>Portafolio: https://rica-2000.github.io/</a
+					>
+				</div>
+			</header>
+
+			<section>
+				<div class="section-title text-sm">PERFIL PROFESIONAL</div>
+				<p class="text-sm text-gray-700 leading-relaxed text-justify">
+					Recien egresado Ingeniería en Sistemas Inteligentes con sólida base
+					técnica en desarrollo de software y atención a usuarios. Experiencia
+					práctica en la creación de aplicaciones web de alto rendimiento
+					(Next.js) y en la implementación de soluciones con Inteligencia
+					Artificial y Procesamiento de Lenguaje Natural (PLN). Proactivo, con
+					gran capacidad de aprendizaje rápido y enfocado en aplicar la
+					tecnología para optimizar procesos y mejorar la experiencia del
+					usuario final.
+				</p>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">EDUCACIÓN</div>
+
+				<div class="mb-4">
+					<div class="flex flex-col sm:flex-row justify-between items-baseline">
+						<h3 class="font-semibold text-gray-800">
+							Universidad Autónoma de San Luis Potosí (UASLP)
+						</h3>
+						<span class="text-sm text-gray-600 font-medium"
+							>San Luis Potosí, MX</span
+						>
+					</div>
+					<div
+						class="flex flex-col sm:flex-row justify-between items-baseline mt-0.5"
+					>
+						<div>
+							<h4 class="text-sm text-gray-600 italic">
+								Ingeniería en Sistemas Inteligentes
+							</h4>
+							<p class="text-sm text-gray-500 italic">
+								(En proceso de titulación)
+							</p>
+						</div>
+						<span class="text-sm text-gray-500">Ago 2021 - Dic 2025</span>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">EXPERIENCIA PROFESIONAL</div>
+
+				<div class="mb-5">
+					<div class="flex flex-col sm:flex-row justify-between items-baseline">
+						<h3 class="font-semibold text-gray-800">Cadena de Comida Rápida</h3>
+						<span class="text-sm text-gray-600 font-medium"
+							>San Luis Potosí, MX</span
+						>
+					</div>
+					<div
+						class="flex flex-col sm:flex-row justify-between items-baseline mt-0.5 mb-2"
+					>
+						<h4 class="text-sm text-gray-600 italic">
+							Atención al Cliente y Soporte Técnico
+						</h4>
+						<span class="text-sm text-gray-500">Junio 2022 - Agosto 2022</span>
+					</div>
+					<ul
+						class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1"
+					>
+						<li>
+							Brindé atención personalizada al cliente, asegurando altos niveles
+							de satisfacción en un entorno de trabajo dinámico.
+						</li>
+						<li>
+							Gestioné bases de datos internas para el seguimiento de inventario
+							y ventas, mejorando la precisión de la información operativa.
+						</li>
+						<li>
+							Realicé soporte computacional básico y solución de problemas para
+							los sistemas de punto de venta (hardware y software).
+						</li>
+					</ul>
+				</div>
+
+				<div class="mb-5">
+					<div class="flex flex-col sm:flex-row justify-between items-baseline">
+						<h3 class="font-semibold text-gray-800">
+							Posgrado en Ingeniería - UASLP (Servicio Social)
+						</h3>
+						<span class="text-sm text-gray-600 font-medium"
+							>San Luis Potosí, MX</span
+						>
+					</div>
+					<div
+						class="flex flex-col sm:flex-row justify-between items-baseline mt-0.5 mb-2"
+					>
+						<h4 class="text-sm text-gray-600 italic">
+							Desarrollador de Chatbot con IA
+						</h4>
+						<span class="text-sm text-gray-500">Feb 2025 - Ago 2025</span>
+					</div>
+					<ul
+						class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1"
+					>
+						<li>
+							Colaboré con el profesorado para diseñar e implementar un chatbot
+							impulsado por IA para asistir a estudiantes de licenciatura.
+						</li>
+						<li>
+							Apliqué conceptos de Procesamiento de Lenguaje Natural (PLN) para
+							mejorar la interacción sistema-usuario y la resolución de
+							consultas.
+						</li>
+						<li>
+							Optimicé los canales de comunicación entre el departamento y los
+							estudiantes a través de respuestas automatizadas y precisas.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">PROYECTOS</div>
+
+				<div class="mb-4">
+					<div
+						class="flex flex-col sm:flex-row justify-between items-baseline mb-2"
+					>
+						<h3 class="font-semibold text-gray-800">
+							CiComp Overflow
+							<span class="font-normal text-sm text-gray-500 italic"
+								>(Inspirado en Stack Overflow)</span
+							>
+						</h3>
+						<span class="text-sm text-gray-600 font-medium"
+							>Next.js 15, App Router</span
+						>
+					</div>
+					<ul
+						class="list-disc list-outside ml-4 text-sm text-gray-700 space-y-1"
+					>
+						<li>
+							Desarrollé un foro de preguntas y respuestas especializado para el
+							departamento de Ciencias de la Computación de la UASLP.
+						</li>
+						<li>
+							Diseñé la plataforma utilizando Next.js 15 con App Router para
+							asegurar un alto rendimiento y optimización SEO.
+						</li>
+						<li>
+							Implementé funcionalidades clave como autenticación de usuarios,
+							creación de publicaciones y un sistema de votación estructurado.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">FORTALEZAS</div>
+				<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
+					<div>
+						<div
+							class="flex items-center gap-2 mb-1 font-semibold text-gray-800"
+						>
+							<i data-lucide="users" class="w-4 h-4 text-gray-600"></i> Trabajo
+							en equipo
+						</div>
+						<p class="text-gray-600 text-xs">
+							Colaboración activa en proyectos académicos y servicio social,
+							aportando en equipos multidisciplinarios para implementar
+							soluciones.
+						</p>
+					</div>
+					<div>
+						<div
+							class="flex items-center gap-2 mb-1 font-semibold text-gray-800"
+						>
+							<i data-lucide="message-square" class="w-4 h-4 text-gray-600"></i>
+							Comunicación efectiva
+						</div>
+						<p class="text-gray-600 text-xs">
+							Capacidad probada para interactuar con usuarios (atención al
+							cliente) y traducir necesidades en soluciones técnicas eficaces.
+						</p>
+					</div>
+					<div>
+						<div
+							class="flex items-center gap-2 mb-1 font-semibold text-gray-800"
+						>
+							<i data-lucide="zap" class="w-4 h-4 text-gray-600"></i>
+							Adaptabilidad
+						</div>
+						<p class="text-gray-600 text-xs">
+							Aprendizaje rápido de nuevas tecnologías y frameworks, adaptándome
+							rápidamente a requerimientos dinámicos en desarrollo y soporte.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">IDIOMAS</div>
+				<div
+					class="flex flex-col sm:flex-row justify-around items-center gap-4 text-sm"
+				>
+					<div class="flex items-center gap-3">
+						<span class="text-gray-700 w-16">Inglés</span>
+						<span class="text-gray-500 text-xs w-16 text-right mr-2"
+							>Intermedio</span
+						>
+						<div class="flex gap-1">
+							<div class="w-2.5 h-2.5 rounded-full bg-gray-800"></div>
+							<div class="w-2.5 h-2.5 rounded-full bg-gray-800"></div>
+							<div class="w-2.5 h-2.5 rounded-full bg-gray-800"></div>
+							<div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+							<div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="section-title text-sm">HABILIDADES TÉCNICAS</div>
+				<p class="text-xs text-gray-700 text-center leading-relaxed">
+					<span class="font-semibold">Lenguajes:</span> Python • C/C++ • PHP •
+					JavaScript • TypeScript • Dart (Flutter) <br />
+					<span class="font-semibold">Frameworks Web:</span> React • Laravel •
+					Angular • Next.js • Node.js • Express.js • Tailwind CSS <br />
+					<span class="font-semibold">Bases de Datos:</span> MySQL • PostgreSQL
+					• SQLite • MongoDB <br />
+					<span class="font-semibold">Herramientas:</span> Git/GitHub • Visual
+					Studio Code • Azure DevOps • Google Colab • Docker
+				</p>
+			</section>
+		</div>
+
+		<script>
+			lucide.createIcons();
+		</script>
+	</body>
+</html>

@@ -1,10 +1,264 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mi Portafolio</title>
-</head>
-<body>
-    <h1>¡Hola Mundo! Este es mi sitio en GitHub Pages</h1>
-    <p>Pronto verás mis proyectos aquí.</p>
-</body>
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ricardo Salinas Huerta | Desarrollador de Software</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-brand">RS</div>
+			<div class="hamburger">
+				<i class="fas fa-bars"></i>
+			</div>
+			<ul class="nav-links">
+				<li><a href="#inicio">Inicio</a></li>
+				<li><a href="#sobre-mi">Sobre Mí</a></li>
+				<li><a href="#tecnologias">Tecnologías</a></li>
+				<li><a href="#proyectos">Proyectos</a></li>
+				<li><a href="#logros">Logros</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<header id="inicio" class="hero">
+			<h1>¡Hola! Soy Ricardo Salinas Huerta</h1>
+			<p>Ingeniero en Sistemas Inteligentes | Desarrollador de Software</p>
+			<p>Especializado en Next.js, React, Angular y Laravel.</p>
+			<div class="hero-buttons">
+				<a href="#proyectos" class="btn">Ver Mis Proyectos</a>
+				<a href="assets/docs/CV.pdf" class="btn btn-outline" target="_blank"
+					>Descargar CV</a
+				>
+			</div>
+		</header>
+
+		<section id="sobre-mi">
+			<h2>Sobre Mí</h2>
+			<div class="about-content">
+				<div class="about-image">
+					<!-- Reemplaza src con tu foto real en assets/images/profile.jpg -->
+					<img
+						src="assets/images/profile-placeholder.jpg"
+						alt="Foto de perfil"
+						class="profile-img"
+					/>
+				</div>
+				<div class="about-text">
+					<p>
+						Recién egresado de Ingeniería en Sistemas Inteligentes por la UASLP
+						con una sólida base técnica en desarrollo de software. Tengo
+						experiencia práctica en la creación de aplicaciones web de alto
+						rendimiento y en la implementación de soluciones con Inteligencia
+						Artificial.
+					</p>
+					<p>
+						Soy una persona proactiva, con gran capacidad de aprendizaje rápido
+						y enfocada en aplicar la tecnología para optimizar procesos y
+						mejorar la experiencia del usuario final.
+					</p>
+					<div class="cv-buttons">
+						<a href="assets/docs/CV.pdf" class="btn" target="_blank" download
+							>Descargar CV (PDF)</a
+						>
+						<a href="assets/CV.html" class="btn btn-secondary" target="_blank"
+							>Ver CV Online</a
+						>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="tecnologias">
+			<h2>Tecnologías</h2>
+			<div class="skills-grid">
+				<div class="skill-card">
+					<i class="fab fa-react"></i>
+					<h3>React / Next.js</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-angular"></i>
+					<h3>Angular</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-laravel"></i>
+					<h3>Laravel</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-python"></i>
+					<h3>Python</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-js"></i>
+					<h3>JavaScript / TS</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fas fa-database"></i>
+					<h3>SQL / MongoDB</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-git-alt"></i>
+					<h3>Git / GitHub</h3>
+				</div>
+				<div class="skill-card">
+					<i class="fab fa-docker"></i>
+					<h3>Docker</h3>
+				</div>
+			</div>
+		</section>
+
+		<section id="proyectos">
+			<h2>Mis Proyectos</h2>
+			<div class="projects-grid">
+				<!-- Proyecto 1 -->
+				<article class="project-card">
+					<div class="project-img">
+						<!-- Reemplaza con una captura real -->
+						<span>CiComp Overflow</span>
+					</div>
+					<div class="project-content">
+						<h3>CiComp Overflow</h3>
+						<p>
+							Foro de preguntas y respuestas inspirado en Stack Overflow para el
+							departamento de Ciencias de la Computación de la UASLP.
+						</p>
+						<p>Features: Autenticación, votaciones, markdown.</p>
+						<div class="project-tags">
+							<span class="tag">Next.js 15</span>
+							<span class="tag">App Router</span>
+							<span class="tag">PostgreSQL</span>
+						</div>
+						<div class="project-links">
+							<a href="#" class="project-link" target="_blank"
+								><i class="fab fa-github"></i> Código (Pronto)</a
+							>
+						</div>
+					</div>
+				</article>
+
+				<!-- Proyecto 2 -->
+				<article class="project-card">
+					<div class="project-img">
+						<span>Chatbot IA</span>
+					</div>
+					<div class="project-content">
+						<h3>Chatbot Universitario IA</h3>
+						<p>
+							Chatbot impulsado por IA para asistir a estudiantes, mejorando la
+							resolución de consultas mediante Procesamiento de Lenguaje Natural
+							(PLN).
+						</p>
+						<div class="project-tags">
+							<span class="tag">Python</span>
+							<span class="tag">NLP</span>
+							<span class="tag">IA</span>
+						</div>
+						<div class="project-links">
+							<span class="project-status">En desarrollo / Confidencial</span>
+						</div>
+					</div>
+				</article>
+
+				<!-- Proyecto 3 - Placeholder -->
+				<article class="project-card placeholder-card">
+					<div class="project-content">
+						<h3>Más Proyectos en Camino...</h3>
+						<p>
+							Estoy trabajando en documentar y subir más proyectos personales y
+							académicos a mi portafolio.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/rica-2000"
+								class="project-link"
+								target="_blank"
+								><i class="fab fa-github"></i> Visitar mi GitHub</a
+							>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="logros">
+			<h2>Logros y Certificados</h2>
+			<div class="achievements-grid">
+				<!-- Certificado 1 Placeholder -->
+				<div class="achievement-card">
+					<div class="achievement-img">
+						<span>Certificado 1</span>
+						<!-- <img src="assets/images/certificado1.jpg" alt="Certificado 1"> -->
+					</div>
+					<div class="achievement-info">
+						<h3>Título del Certificado</h3>
+						<p>Entidad Emisora - Año</p>
+					</div>
+				</div>
+
+				<!-- Certificado 2 Placeholder -->
+				<div class="achievement-card">
+					<div class="achievement-img">
+						<span>Certificado 2</span>
+					</div>
+					<div class="achievement-info">
+						<h3>Título del Certificado</h3>
+						<p>Entidad Emisora - Año</p>
+					</div>
+				</div>
+
+				<!-- Certificado 3 Placeholder -->
+				<div class="achievement-card">
+					<div class="achievement-img">
+						<span>Certificado 3</span>
+					</div>
+					<div class="achievement-info">
+						<h3>Título del Certificado</h3>
+						<p>Entidad Emisora - Año</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contacto">
+			<h2>Contacto</h2>
+			<div class="contact-container">
+				<p>¿Tienes un proyecto en mente o quieres contactarme? ¡Hablemos!</p>
+				<div class="social-links">
+					<a
+						href="https://github.com/rica-2000"
+						class="social-link"
+						target="_blank"
+						title="GitHub"
+					>
+						<i class="fab fa-github"></i>
+					</a>
+					<a
+						href="mailto:rica-sal@hotmail.com"
+						class="social-link"
+						title="Email"
+					>
+						<i class="fas fa-envelope"></i>
+					</a>
+					<a href="#" class="social-link" target="_blank" title="LinkedIn">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<div class="contact-details" style="margin-top: 2rem">
+					<p><i class="fas fa-phone"></i> +52 487 129 5285</p>
+					<p><i class="fas fa-map-marker-alt"></i> San Luis Potosí, México</p>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p>&copy; 2026 Ricardo Salinas Huerta. Todos los derechos reservados.</p>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
 </html>
