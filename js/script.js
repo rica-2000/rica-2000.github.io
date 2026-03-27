@@ -249,4 +249,30 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 	});
+
+	const accessBlocks = document.querySelectorAll(".project-access");
+
+	accessBlocks.forEach((block) => {
+		const title = block.querySelector(".project-access-title");
+		const list = block.querySelector(".project-access-list");
+		if (!title || !list) return;
+
+		block.classList.remove("open");
+		title.setAttribute("role", "button");
+		title.setAttribute("tabindex", "0");
+		title.setAttribute("aria-expanded", "false");
+
+		const toggleAccess = () => {
+			const isOpen = block.classList.toggle("open");
+			title.setAttribute("aria-expanded", isOpen ? "true" : "false");
+		};
+
+		title.addEventListener("click", toggleAccess);
+		title.addEventListener("keydown", (event) => {
+			if (event.key === "Enter" || event.key === " ") {
+				event.preventDefault();
+				toggleAccess();
+			}
+		});
+	});
 });

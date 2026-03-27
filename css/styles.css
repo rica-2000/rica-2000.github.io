@@ -742,26 +742,50 @@ h2 {
 	border: 1px solid #ffd9c9;
 }
 
+.project-access.open {
+	background: linear-gradient(180deg, #fff4ec, #fff);
+	border-color: #ffc9b1;
+}
+
 .project-access-title {
-	margin: 0 0 0.45rem;
+	margin: 0;
 	font-weight: 700;
 	font-size: 0.9rem;
 	color: #8c3c21;
-	display: inline-flex;
+	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	gap: 0.35rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.project-access-title::after {
+	content: "+";
+	font-size: 1rem;
+	line-height: 1;
+	color: #a64a29;
+}
+
+.project-access.open .project-access-title::after {
+	content: "−";
 }
 
 .project-access-list {
 	list-style: none;
-	display: grid;
+	display: none;
 	gap: 0.3rem;
-	margin: 0;
+	margin: 0.55rem 0 0;
 	padding: 0;
 	font-size: 0.82rem;
 	color: rgba(19, 34, 58, 0.86);
 	line-height: 1.35;
 	word-break: break-word;
+}
+
+.project-access.open .project-access-list {
+	display: grid;
 }
 
 .project-gallery {
