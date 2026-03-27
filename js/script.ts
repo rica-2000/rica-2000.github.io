@@ -62,6 +62,126 @@ document.addEventListener("DOMContentLoaded", () => {
 		revealTargets.forEach((el) => revealObserver.observe(el));
 	}
 
+	const galleries = document.querySelectorAll<HTMLElement>(".project-gallery");
+
+	galleries.forEach((gallery, galleryIndex) => {
+		const slides = Array.from(
+			gallery.querySelectorAll<HTMLImageElement>("img"),
+		);
+		if (slides.length < 2) return;
+
+		gallery.classList.add("project-carousel");
+
+		const projectTitle =
+			gallery
+				.closest(".project-card")
+				?.querySelector("h3")
+				?.textContent?.trim() || `proyecto ${galleryIndex + 1}`;
+
+		const track = document.createElement("div");
+		track.className = "project-carousel-track";
+
+		slides.forEach((img, index) => {
+			img.classList.add("project-carousel-slide");
+			img.loading = "lazy";
+			img.decoding = "async";
+			img.dataset.index = String(index);
+			track.appendChild(img);
+		});
+
+		gallery.innerHTML = "";
+		gallery.appendChild(track);
+
+		const prevBtn = document.createElement("button");
+		prevBtn.type = "button";
+		prevBtn.className = "project-carousel-btn project-carousel-btn--prev";
+		prevBtn.textContent = "\u2039";
+		prevBtn.setAttribute("aria-label", `Imagen anterior de ${projectTitle}`);
+
+		const nextBtn = document.createElement("button");
+		nextBtn.type = "button";
+		nextBtn.className = "project-carousel-btn project-carousel-btn--next";
+		nextBtn.textContent = "\u203A";
+		nextBtn.setAttribute("aria-label", `Siguiente imagen de ${projectTitle}`);
+
+		const dots = document.createElement("div");
+		dots.className = "project-carousel-dots";
+
+		const dotButtons: HTMLButtonElement[] = slides.map((_, index) => {
+			const dot = document.createElement("button");
+			dot.type = "button";
+			dot.className = "project-carousel-dot";
+			dot.setAttribute(
+				"aria-label",
+				`Ir a imagen ${index + 1} de ${projectTitle}`,
+			);
+			dots.appendChild(dot);
+			return dot;
+		});
+
+		gallery.appendChild(prevBtn);
+		gallery.appendChild(nextBtn);
+		gallery.appendChild(dots);
+
+		let currentIndex = 0;
+
+		const updateCarouselState = () => {
+			prevBtn.disabled = currentIndex === 0;
+			nextBtn.disabled = currentIndex === slides.length - 1;
+
+			dotButtons.forEach((dot, index) => {
+				const isActive = index === currentIndex;
+				dot.classList.toggle("active", isActive);
+				dot.setAttribute("aria-current", isActive ? "true" : "false");
+			});
+		};
+
+		const scrollToSlide = (index: number) => {
+			currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+			track.scrollTo({
+				left: currentIndex * track.clientWidth,
+				behavior: "smooth",
+			});
+			updateCarouselState();
+		};
+
+		prevBtn.addEventListener("click", () => scrollToSlide(currentIndex - 1));
+		nextBtn.addEventListener("click", () => scrollToSlide(currentIndex + 1));
+
+		dotButtons.forEach((dot, index) => {
+			dot.addEventListener("click", () => scrollToSlide(index));
+		});
+
+		let isTicking = false;
+		track.addEventListener(
+			"scroll",
+			() => {
+				if (isTicking) return;
+				isTicking = true;
+
+				window.requestAnimationFrame(() => {
+					const nextIndex = Math.round(
+						track.scrollLeft / Math.max(track.clientWidth, 1),
+					);
+
+					if (nextIndex !== currentIndex) {
+						currentIndex = nextIndex;
+						updateCarouselState();
+					}
+
+					isTicking = false;
+				});
+			},
+			{ passive: true },
+		);
+
+		window.addEventListener("resize", () => {
+			track.scrollLeft = currentIndex * track.clientWidth;
+		});
+
+		updateCarouselState();
+	});
+
 	const lightbox = document.getElementById("image-lightbox");
 	const lightboxImg = document.getElementById(
 		"lightbox-img",
